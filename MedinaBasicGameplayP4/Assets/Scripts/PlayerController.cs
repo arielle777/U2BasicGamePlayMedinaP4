@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float xRange = 10.0f;
     public float zRange = -11.0f;
 
+    public Transform projectileSpawnPoint;
+
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
