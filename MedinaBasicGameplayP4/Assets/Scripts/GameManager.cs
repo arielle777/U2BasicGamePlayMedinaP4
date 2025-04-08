@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int score = 0;
-    public int lives = 2;
+    public int lives = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
         public void AddScore(int value)
     {
-        lives += value;
+        score += value;
         Debug.Log("Score = " + score);
        
     }

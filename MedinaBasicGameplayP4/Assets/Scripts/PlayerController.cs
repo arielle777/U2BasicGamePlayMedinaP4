@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public float verticalInput; 
     public float speed = 10.0f;
     public float xRange = 10.0f;
-    public float zRange = -11.0f;
+    public float zMin;
+    public float zMax;
+    public float zverticalInput;
 
     public Transform projectileSpawnPoint;
 
@@ -34,13 +36,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-        if (transform.position.z < -12)
+        if (transform.position.z < zMin)
         {
-            transform.position = new Vector3(-11,0, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMin);
         }
-        if (transform.position.z > 6)
+        if (transform.position.z > zMax)
         {
-            transform.position = new Vector3(-11, 0, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMax);
         }
 
         // Get player to move 
