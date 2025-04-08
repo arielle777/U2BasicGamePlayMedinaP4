@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
     public float verticalInput; 
     public float speed = 10.0f;
     public float xRange = 10.0f;
-    public float zMin;
-    public float zMax;
+    public float zMin = -10;
+    public float zMax= 10;
     public float zverticalInput;
+  
 
     public Transform projectileSpawnPoint;
 
